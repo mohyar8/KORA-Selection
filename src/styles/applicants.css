@@ -1,0 +1,408 @@
+.applicants-page {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+  padding: var(--page-pad);
+}
+
+.applicants-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-block-end: var(--space-6);
+}
+
+.applicants-page-eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--kora-fuchsia);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.applicants-page-header h1 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.applicants-page-description {
+  max-width: 60ch;
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.applicants-results-count {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  color: var(--text-secondary);
+  background: var(--surface-default);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.applicants-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(150px, 1fr)) auto;
+  align-items: end;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.applicants-control {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.applicants-control label {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.applicants-control input,
+.applicants-control select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+  background: var(--kora-white);
+  font-size: 1rem;
+}
+
+.applicants-control input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.applicants-control select {
+  padding-inline: var(--space-3);
+}
+
+.applicants-control select:disabled {
+  cursor: not-allowed;
+  border-color: var(--neutral-200);
+  color: var(--neutral-500);
+  background: var(--neutral-100);
+}
+
+.applicants-search-input-wrap {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--neutral-500);
+  background: var(--kora-white);
+}
+
+.applicants-search-input-wrap:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 1px var(--focus-ring);
+}
+
+.applicants-clear-filters,
+.applicants-empty-action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--kora-navy);
+  background: var(--kora-white);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.applicants-clear-filters:hover,
+.applicants-empty-action:hover {
+  border-color: var(--kora-navy);
+  background: var(--neutral-100);
+}
+
+.applicants-clear-filters:disabled {
+  cursor: not-allowed;
+  border-color: var(--neutral-200);
+  color: var(--neutral-500);
+  background: var(--neutral-100);
+}
+
+.applicants-table-region {
+  margin-block-start: var(--space-5);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.applicants-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.applicants-table th,
+.applicants-table td {
+  padding: var(--space-4);
+  text-align: start;
+  vertical-align: middle;
+}
+
+.applicants-table th {
+  border-block-end: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  background: var(--neutral-50);
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.applicants-table td {
+  border-block-end: 1px solid var(--neutral-200);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.applicants-table tbody tr:last-child td {
+  border-block-end: 0;
+}
+
+.applicants-table tbody tr:hover {
+  background: rgb(45 59 112 / 3%);
+}
+
+.applicant-name {
+  min-width: 190px;
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
+.applicant-preference {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 150px;
+  line-height: 1.5;
+}
+
+.applicant-preference-number {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1px solid var(--neutral-300);
+  border-radius: 50%;
+  color: var(--kora-navy);
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.project-decision-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding-inline: var(--space-3);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.project-decision-chip--undecided {
+  border-color: var(--neutral-300);
+  color: var(--neutral-700);
+  background: var(--neutral-100);
+}
+
+.project-decision-chip--preliminary-nomination {
+  border-color: rgb(148 67 153 / 26%);
+  color: #703176;
+  background: #f4eaf5;
+}
+
+.project-decision-chip--final-nomination {
+  border-color: rgb(78 166 73 / 28%);
+  color: #2d7031;
+  background: #eaf4e9;
+}
+
+.project-decision-chip--rejected {
+  border-color: #e5c8c3;
+  color: #80382f;
+  background: #f9eeec;
+}
+
+.applicants-empty-state {
+  margin-block-start: var(--space-5);
+  padding: var(--space-8) var(--space-5);
+  border: 1px dashed var(--neutral-300);
+  border-radius: var(--radius-card);
+  text-align: center;
+  background: var(--surface-default);
+}
+
+.applicants-empty-state h2 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.applicants-empty-state p {
+  max-width: 48ch;
+  margin: var(--space-3) auto 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.applicants-empty-action {
+  margin-block-start: var(--space-5);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .applicants-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .applicants-search-control {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .applicants-page-header {
+    display: grid;
+    align-items: start;
+    gap: var(--space-4);
+  }
+
+  .applicants-results-count {
+    justify-self: start;
+  }
+
+  .applicants-controls {
+    grid-template-columns: 1fr;
+    padding: var(--space-4);
+  }
+
+  .applicants-search-control {
+    grid-column: auto;
+  }
+
+  .applicants-clear-filters {
+    width: 100%;
+  }
+
+  .applicants-table-region {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .applicants-table,
+  .applicants-table tbody {
+    display: block;
+  }
+
+  .applicants-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .applicants-table tbody {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .applicants-table tr {
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-card);
+    background: var(--surface-default);
+  }
+
+  .applicants-table td {
+    display: grid;
+    grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0;
+    border: 0;
+  }
+
+  .applicants-table td::before {
+    color: var(--text-secondary);
+    content: attr(data-label);
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+
+  .applicants-table td:first-child {
+    padding-block-end: var(--space-3);
+    border-block-end: 1px solid var(--neutral-200);
+  }
+
+  .applicant-name {
+    font-size: 1.05rem;
+  }
+
+  .applicant-preference {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .applicants-page {
+    padding-block: var(--space-5);
+  }
+
+  .applicants-table td {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .applicants-table td:first-child {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://kora-backend.mohyar18.workers.dev/api/:path*"
+    }
+  ]
+}

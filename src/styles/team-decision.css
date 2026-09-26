@@ -1,0 +1,207 @@
+.team-decision-panel {
+  padding: var(--space-5);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.team-decision-panel__header,
+.team-decision-panel__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.team-decision-panel__eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--kora-fuchsia);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.team-decision-panel h2 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.team-decision-panel__version {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  text-align: end;
+}
+
+.team-decision-panel__current-note,
+.team-decision-panel__change-summary {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.team-decision-panel__notice,
+.team-decision-panel__field-error {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3);
+  border: 1px solid;
+  border-radius: var(--radius-control);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.team-decision-panel__notice--success {
+  border-color: #b8d9b5;
+  color: #245d29;
+  background: #edf7eb;
+}
+
+.team-decision-panel__notice--warning,
+.team-decision-panel__field-error {
+  border-color: #e5c8c3;
+  color: #80382f;
+  background: #f9eeec;
+}
+
+.team-decision-panel__edit-button,
+.team-decision-panel__submit-button,
+.team-decision-panel__cancel-button {
+  min-height: 42px;
+  padding-inline: var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.team-decision-panel__edit-button,
+.team-decision-panel__submit-button {
+  margin-block-start: var(--space-5);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+}
+
+.team-decision-panel__edit-button:hover,
+.team-decision-panel__submit-button:hover {
+  background: var(--neutral-950);
+}
+
+.team-decision-panel__form {
+  display: grid;
+  gap: var(--space-4);
+  margin-block-start: var(--space-5);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--border-default);
+}
+
+.team-decision-panel fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.team-decision-panel legend,
+.team-decision-panel__note-field > label {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.team-decision-panel__options {
+  display: grid;
+  gap: var(--space-2);
+  margin-block-start: var(--space-3);
+}
+
+.team-decision-panel__options label {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.team-decision-panel__options label:has(input:checked) {
+  border-color: var(--kora-navy);
+  background: var(--neutral-100);
+}
+
+.team-decision-panel__options input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--kora-navy);
+}
+
+.team-decision-panel__note-field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.team-decision-panel textarea {
+  width: 100%;
+  min-height: 112px;
+  resize: vertical;
+  padding: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+  background: var(--surface-default);
+  font: inherit;
+  line-height: 1.6;
+}
+
+.team-decision-panel textarea:focus-visible,
+.team-decision-panel__options label:has(input:focus-visible) {
+  outline: 3px solid rgb(45 59 112 / 28%);
+  outline-offset: 2px;
+}
+
+.team-decision-panel__actions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.team-decision-panel__actions .team-decision-panel__submit-button {
+  margin-block-start: 0;
+}
+
+.team-decision-panel__cancel-button {
+  border-color: var(--neutral-300);
+  color: var(--kora-navy);
+  background: transparent;
+}
+
+.team-decision-panel__cancel-button:hover {
+  background: var(--neutral-100);
+}
+
+.team-decision-panel button:disabled,
+.team-decision-panel input:disabled,
+.team-decision-panel textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+@media (max-width: 640px) {
+  .team-decision-panel {
+    padding: var(--space-4);
+  }
+
+  .team-decision-panel__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team-decision-panel__version {
+    text-align: start;
+  }
+
+  .team-decision-panel__actions > button {
+    flex: 1 1 140px;
+  }
+}

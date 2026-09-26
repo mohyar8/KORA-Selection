@@ -1,0 +1,419 @@
+.applicant-details-page {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+  padding: var(--page-pad);
+}
+
+.applicant-details-link {
+  color: var(--kora-navy);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+}
+
+.applicant-details-link:hover {
+  color: var(--kora-fuchsia);
+  text-decoration-color: currentcolor;
+}
+
+.applicant-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  color: var(--kora-navy);
+  font-weight: 500;
+}
+
+.applicant-back-link:hover {
+  color: var(--kora-fuchsia);
+}
+
+.applicant-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-block: var(--space-5) var(--space-7);
+  padding-block-end: var(--space-5);
+  border-block-end: 1px solid var(--border-default);
+}
+
+.applicant-details-eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--kora-fuchsia);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.applicant-details-header h1 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.applicant-details-subtitle {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.applicant-details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
+  gap: clamp(var(--space-6), 5vw, var(--space-9));
+  align-items: start;
+}
+
+.applicant-details-main {
+  min-width: 0;
+}
+
+.applicant-details-section {
+  padding-block: var(--space-6);
+  border-block-end: 1px solid var(--border-default);
+}
+
+.applicant-details-section:first-child {
+  padding-block-start: 0;
+}
+
+.applicant-details-section:last-child {
+  border-block-end: 0;
+}
+
+.applicant-details-section h2,
+.applicant-side-section h2 {
+  margin: 0 0 var(--space-5);
+  color: var(--kora-navy);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.applicant-information-list {
+  display: grid;
+  gap: var(--space-4) var(--space-5);
+  margin: 0;
+}
+
+.applicant-information-list--grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.applicant-information-list div {
+  min-width: 0;
+}
+
+.applicant-information-list dt {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.applicant-information-list dd {
+  min-width: 0;
+  margin: var(--space-2) 0 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.applicant-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--kora-navy);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.applicant-contact-link:hover {
+  color: var(--kora-fuchsia);
+}
+
+.applicant-external-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-block-start: var(--space-5);
+}
+
+.applicant-external-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--kora-navy);
+  font-weight: 500;
+}
+
+.applicant-external-link:hover {
+  border-color: var(--kora-navy);
+  background: var(--neutral-100);
+}
+
+.applicant-preferences-list {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.applicant-preference-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.applicant-preference-order {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--neutral-300);
+  border-radius: 50%;
+  color: var(--kora-navy);
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.applicant-preference-item h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.applicant-preference-item p {
+  margin: var(--space-1) 0 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.applicant-preference-item .applicant-preference-reason {
+  margin-block-start: var(--space-3);
+  color: var(--text-primary);
+}
+
+.applicant-form-responses {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+}
+
+.applicant-form-responses div {
+  padding-block-end: var(--space-5);
+  border-block-end: 1px solid var(--neutral-200);
+}
+
+.applicant-form-responses div:last-child {
+  padding-block-end: 0;
+  border-block-end: 0;
+}
+
+.applicant-form-responses dt {
+  color: var(--kora-navy);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.applicant-form-responses dd {
+  max-width: 78ch;
+  margin: var(--space-2) 0 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.applicant-details-side {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.applicant-side-section {
+  padding: var(--space-5);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.applicant-side-section h2 {
+  margin-block-end: var(--space-4);
+  font-size: 1.1rem;
+}
+
+.applicant-status,
+.applicant-team-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding-inline: var(--space-3);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.applicant-status--unreviewed {
+  border-color: var(--neutral-300);
+  color: var(--neutral-700);
+  background: var(--neutral-100);
+}
+
+.applicant-status--preliminary {
+  border-color: rgb(148 67 153 / 26%);
+  color: #703176;
+  background: #f4eaf5;
+}
+
+.applicant-status--final-nomination {
+  border-color: rgb(78 166 73 / 28%);
+  color: #2d7031;
+  background: #eaf4e9;
+}
+
+.applicant-status--rejected,
+.applicant-team-status--rejected {
+  border-color: #e5c8c3;
+  color: #80382f;
+  background: #f9eeec;
+}
+
+.applicant-decision-note {
+  margin: var(--space-4) 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.applicant-nominations-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.applicant-nomination-item {
+  padding-block-end: var(--space-4);
+  border-block-end: 1px solid var(--neutral-200);
+}
+
+.applicant-nomination-item:last-child {
+  padding-block-end: 0;
+  border-block-end: 0;
+}
+
+.applicant-nomination-item h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.applicant-nomination-item p {
+  margin: var(--space-1) 0 var(--space-3);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.applicant-team-status--pending {
+  border-color: var(--neutral-300);
+  color: var(--neutral-700);
+  background: var(--neutral-100);
+}
+
+.applicant-team-status--preliminary-accepted {
+  border-color: rgb(148 67 153 / 26%);
+  color: #703176;
+  background: #f4eaf5;
+}
+
+.applicant-team-status--final-accepted {
+  border-color: rgb(78 166 73 / 28%);
+  color: #2d7031;
+  background: #eaf4e9;
+}
+
+.applicant-not-found {
+  max-width: 620px;
+  margin-block-start: var(--space-7);
+  padding: var(--space-7);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.applicant-not-found h1 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.applicant-not-found p {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.applicant-not-found-action {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  margin-block-start: var(--space-5);
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-control);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+  font-weight: 500;
+}
+
+.applicant-not-found-action:hover {
+  background: var(--neutral-950);
+}
+
+@media (max-width: 900px) {
+  .applicant-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .applicant-details-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .applicant-details-page {
+    padding-block: var(--space-5);
+  }
+
+  .applicant-details-header {
+    display: grid;
+    gap: var(--space-4);
+    margin-block-end: var(--space-6);
+  }
+
+  .applicant-information-list--grid,
+  .applicant-details-side {
+    grid-template-columns: 1fr;
+  }
+
+  .applicant-details-section {
+    padding-block: var(--space-5);
+  }
+
+  .applicant-side-section {
+    padding: var(--space-4);
+  }
+
+  .applicant-not-found {
+    margin-block-start: var(--space-5);
+    padding: var(--space-5);
+  }
+}

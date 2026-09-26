@@ -1,0 +1,250 @@
+.project-decision-panel {
+  padding: var(--space-5);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.project-decision-panel__header,
+.project-decision-panel__teams-heading,
+.project-decision-panel__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.project-decision-panel__eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--kora-fuchsia);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.project-decision-panel h2,
+.project-decision-panel h3 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-weight: 700;
+}
+
+.project-decision-panel h2 {
+  font-size: 1.2rem;
+}
+
+.project-decision-panel h3 {
+  font-size: 0.96rem;
+}
+
+.project-decision-panel__version {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  text-align: end;
+}
+
+.project-decision-panel__current-note,
+.project-decision-panel__change-summary,
+.project-decision-panel__teams > p,
+.project-decision-panel__note-field > p {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.project-decision-panel__nominations {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--neutral-200);
+}
+
+.project-decision-panel__nominations ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-decision-panel__nominations li::before {
+  content: '—';
+  margin-inline-end: var(--space-2);
+  color: var(--kora-fuchsia);
+}
+
+.project-decision-panel__notice,
+.project-decision-panel__field-error {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3);
+  border: 1px solid;
+  border-radius: var(--radius-control);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.project-decision-panel__notice--success {
+  border-color: #b8d9b5;
+  color: #245d29;
+  background: #edf7eb;
+}
+
+.project-decision-panel__notice--warning,
+.project-decision-panel__field-error {
+  border-color: #e5c8c3;
+  color: #80382f;
+  background: #f9eeec;
+}
+
+.project-decision-panel__edit-button,
+.project-decision-panel__submit-button,
+.project-decision-panel__cancel-button {
+  min-height: 42px;
+  padding-inline: var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.project-decision-panel__edit-button,
+.project-decision-panel__submit-button {
+  margin-block-start: var(--space-5);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+}
+
+.project-decision-panel__edit-button:hover,
+.project-decision-panel__submit-button:hover {
+  background: var(--neutral-950);
+}
+
+.project-decision-panel__form {
+  display: grid;
+  gap: var(--space-4);
+  margin-block-start: var(--space-5);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--border-default);
+}
+
+.project-decision-panel fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.project-decision-panel legend,
+.project-decision-panel__note-field > label,
+.project-decision-panel__teams-heading > label {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.project-decision-panel__options,
+.project-decision-panel__team-list {
+  display: grid;
+  gap: var(--space-2);
+  margin-block-start: var(--space-3);
+}
+
+.project-decision-panel__options label,
+.project-decision-panel__team-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 42px;
+  padding: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.project-decision-panel__options label:has(input:checked),
+.project-decision-panel__team-option:has(input:checked) {
+  border-color: var(--kora-navy);
+  background: var(--neutral-100);
+}
+
+.project-decision-panel__options input,
+.project-decision-panel__team-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--kora-navy);
+}
+
+.project-decision-panel__teams-heading > span {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.project-decision-panel__note-field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.project-decision-panel textarea {
+  width: 100%;
+  min-height: 112px;
+  resize: vertical;
+  padding: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+  background: var(--surface-default);
+  font: inherit;
+  line-height: 1.6;
+}
+
+.project-decision-panel textarea:focus-visible,
+.project-decision-panel__options label:has(input:focus-visible),
+.project-decision-panel__team-option:has(input:focus-visible) {
+  outline: 3px solid rgb(45 59 112 / 28%);
+  outline-offset: 2px;
+}
+
+.project-decision-panel__actions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-decision-panel__actions .project-decision-panel__submit-button {
+  margin-block-start: 0;
+}
+
+.project-decision-panel__cancel-button {
+  border-color: var(--neutral-300);
+  color: var(--kora-navy);
+  background: transparent;
+}
+
+.project-decision-panel__cancel-button:hover {
+  background: var(--neutral-100);
+}
+
+.project-decision-panel button:disabled,
+.project-decision-panel input:disabled,
+.project-decision-panel textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+@media (max-width: 640px) {
+  .project-decision-panel {
+    padding: var(--space-4);
+  }
+
+  .project-decision-panel__header,
+  .project-decision-panel__teams-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-decision-panel__version {
+    text-align: start;
+  }
+
+  .project-decision-panel__actions > button {
+    flex: 1 1 140px;
+  }
+}

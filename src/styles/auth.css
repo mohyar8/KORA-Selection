@@ -1,0 +1,315 @@
+.auth-startup {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: var(--page-pad);
+  background: var(--surface-subtle);
+}
+
+.auth-startup-content {
+  display: grid;
+  justify-items: center;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-startup-mark {
+  width: 42px;
+  height: 42px;
+  margin-block-end: var(--space-4);
+  border: 3px solid rgb(45 59 112 / 16%);
+  border-block-start-color: var(--kora-navy);
+  border-radius: 50%;
+  animation: auth-spin 850ms linear infinite;
+}
+
+.auth-startup-content h1 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.auth-startup-content p {
+  margin: var(--space-3) 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.auth-startup-content--error {
+  padding: var(--space-7);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+}
+
+.auth-retry-button {
+  min-height: 44px;
+  margin-block-start: var(--space-5);
+  padding-inline: var(--space-4);
+  border: 0;
+  border-radius: var(--radius-control);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+  font-weight: 500;
+}
+
+.auth-retry-button:hover {
+  background: var(--neutral-950);
+}
+
+.login-page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  min-height: 100vh;
+  background: var(--surface-subtle);
+}
+
+.login-brand-region {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: clamp(32px, 6vw, 96px);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+}
+
+.login-brand-logo {
+  width: min(190px, 58%);
+  height: auto;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.login-brand-region > div {
+  max-width: 550px;
+}
+
+.login-brand-kicker {
+  margin: 0 0 var(--space-3);
+  color: rgb(255 255 255 / 72%);
+  direction: ltr;
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.login-brand-region h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.login-brand-region p:not(.login-brand-kicker) {
+  max-width: 44ch;
+  margin: var(--space-4) 0 0;
+  color: rgb(255 255 255 / 78%);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.login-form-region {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: clamp(28px, 5vw, 80px);
+  background: var(--surface-default);
+}
+
+.login-form {
+  width: min(100%, 420px);
+}
+
+.login-form-heading {
+  margin-block-end: var(--space-7);
+}
+
+.login-form-heading p {
+  margin: 0 0 var(--space-2);
+  color: var(--kora-fuchsia);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.login-form-heading h2 {
+  margin: 0;
+  color: var(--kora-navy);
+  font-size: clamp(1.9rem, 3vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.login-form-heading span {
+  display: block;
+  margin-block-start: var(--space-3);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.login-field {
+  display: grid;
+  gap: var(--space-2);
+  margin-block-start: var(--space-5);
+}
+
+.login-field label {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.login-field input {
+  width: 100%;
+  min-height: 48px;
+  padding-inline: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+  background: var(--kora-white);
+  font-size: 1rem;
+}
+
+.login-field input:disabled {
+  cursor: not-allowed;
+  color: var(--neutral-500);
+  background: var(--neutral-100);
+}
+
+.login-password-wrap {
+  position: relative;
+}
+
+.login-password-wrap input {
+  padding-inline-end: 52px;
+}
+
+.login-password-visibility {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  display: grid;
+  width: 48px;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-control);
+  color: var(--kora-navy);
+  background: transparent;
+}
+
+.login-password-visibility:hover:not(:disabled) {
+  color: var(--kora-fuchsia);
+}
+
+.login-password-visibility:disabled {
+  cursor: not-allowed;
+  color: var(--neutral-500);
+}
+
+.login-form-error {
+  margin: var(--space-5) 0 0;
+  padding: var(--space-3);
+  border: 1px solid #e5c8c3;
+  border-radius: var(--radius-control);
+  color: #80382f;
+  background: #f9eeec;
+  line-height: 1.6;
+}
+
+.login-submit-button {
+  width: 100%;
+  min-height: 48px;
+  margin-block-start: var(--space-6);
+  border: 0;
+  border-radius: var(--radius-control);
+  color: var(--kora-white);
+  background: var(--kora-navy);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login-submit-button:hover:not(:disabled) {
+  background: var(--neutral-950);
+}
+
+.login-submit-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.sidebar-logout-button {
+  width: 100%;
+  margin-block-start: var(--space-2);
+  text-align: start;
+}
+
+.sidebar-logout-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.sidebar-logout-error {
+  margin: var(--space-2) 0 0;
+  color: rgb(255 255 255 / 78%);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@keyframes auth-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-region {
+    min-height: auto;
+    gap: var(--space-5);
+    padding: var(--space-6) var(--page-pad);
+  }
+
+  .login-brand-logo {
+    width: 144px;
+  }
+
+  .login-brand-region h1 {
+    font-size: 1.9rem;
+  }
+
+  .login-brand-region p:not(.login-brand-kicker) {
+    margin-block-start: var(--space-3);
+    font-size: 1rem;
+  }
+
+  .login-form-region {
+    min-height: auto;
+    padding-block: var(--space-7);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-brand-region {
+    padding-block: var(--space-5);
+  }
+
+  .login-form-region {
+    place-items: start stretch;
+    padding: var(--space-5) var(--page-pad);
+  }
+
+  .auth-startup-content--error {
+    padding: var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-startup-mark {
+    animation: none;
+  }
+}
