@@ -27,6 +27,7 @@ type ApiRequestAuthentication = 'none' | 'required';
 type ApiRequestOptions = {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   jsonBody?: unknown;
+  formData?: FormData;
   signal?: AbortSignal;
   authentication?: ApiRequestAuthentication;
 };
@@ -98,6 +99,7 @@ function createApiClient({ basePath = '/api' }: ApiClientConfig = {}) {
     {
       method = 'GET',
       jsonBody,
+      formData,
       signal,
       authentication = 'none',
     }: ApiRequestOptions = {},
@@ -115,7 +117,10 @@ function createApiClient({ basePath = '/api' }: ApiClientConfig = {}) {
             : {
                 'Content-Type': 'application/json',
               },
-        body: jsonBody === undefined ? undefined : JSON.stringify(jsonBody),
+        body:
+          jsonBody === undefined
+            ? formData
+            : JSON.stringify(jsonBody),
       });
     } catch {
       throw new ApiClientError({

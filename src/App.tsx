@@ -7,6 +7,8 @@ import { AppShell } from './components/AppShell';
 import { FinalAcceptedWorkspace } from './components/FinalAcceptedWorkspace';
 import { InboxWorkspace } from './components/InboxWorkspace';
 import { ObjectionsWorkspace } from './components/ObjectionsWorkspace';
+import { AdminWorkspace } from './components/AdminWorkspace';
+import { ImportWorkspace } from './components/ImportWorkspace';
 import { LoginPage } from './components/LoginPage';
 import { WorkspacePlaceholder } from './components/WorkspacePlaceholder';
 
@@ -74,6 +76,26 @@ function App() {
               <Route
                 path="inbox"
                 element={<InboxWorkspace />}
+              />
+              <Route
+                path="admin"
+                element={
+                  user?.role === 'PROJECT_LEAD' ? (
+                    <AdminWorkspace />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="import"
+                element={
+                  user?.role === 'PROJECT_LEAD' || user?.role === 'PROJECT_MEMBER' ? (
+                    <ImportWorkspace />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
               />
             </Route>
 

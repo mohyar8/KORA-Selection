@@ -4,6 +4,8 @@ import {
   ClipboardList,
   ClipboardCheck,
   MessageSquareWarning,
+  Settings,
+  Upload,
   Inbox,
   LogOut,
   Menu,
@@ -49,6 +51,18 @@ const navigationItems: NavigationItem[] = [
     label: 'الاعتراضات',
     to: '/objections',
     icon: MessageSquareWarning,
+    allowedRoles: ['PROJECT_LEAD', 'PROJECT_MEMBER'],
+  },
+  {
+    label: 'الإدارة',
+    to: '/admin',
+    icon: Settings,
+    allowedRoles: ['PROJECT_LEAD'],
+  },
+  {
+    label: 'استيراد المتقدمين',
+    to: '/import',
+    icon: Upload,
     allowedRoles: ['PROJECT_LEAD', 'PROJECT_MEMBER'],
   },
 ];
